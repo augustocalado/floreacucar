@@ -88,7 +88,7 @@ export default function Home() {
             </div>
             <div className="space-y-6">
               <h2 className="font-serif text-4xl font-bold md:text-5xl">
-                O Segredo da Melhor <br /> Pipoca Gourmet
+                O Segredo da Melhor <br /> Flor e Açúcar
               </h2>
               <p className="text-lg opacity-80">
                 Nossa jornada começou com uma paixão simples: transformar o milho tradicional em uma obra de arte gastronômica. 

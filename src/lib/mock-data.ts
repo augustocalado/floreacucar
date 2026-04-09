@@ -30,7 +30,7 @@ export const categories: Category[] = [
 export const products: Product[] = [
   {
     id: 'p1',
-    name: 'Pipoca Gourmet Ninho com Nutella',
+    name: 'Flor e Açúcar Ninho com Nutella',
     description: 'Nossa campeã de vendas. Pipoca caramelizada coberta com leite Ninho e muita Nutella autêntica.',
     price_base: 22.90,
     image_url: 'https://images.unsplash.com/photo-1585647347483-22b66260dfff?q=80&w=800&auto=format&fit=crop',

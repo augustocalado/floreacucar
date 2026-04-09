@@ -15,7 +15,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <Popcorn className="h-8 w-8 text-gold" />
             <span className="hidden font-serif text-xl font-bold tracking-tight text-brown-dark sm:block">
-              Pipoca Gourmet
+              Flor e Açúcar
             </span>
           </Link>
         </div>

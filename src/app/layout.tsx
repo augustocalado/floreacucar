@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Pipoca Gourmet | Experiência Única & Sofisticada",
+  title: "Flor e Açúcar | Experiência Única & Sofisticada",
   description: "As melhores pipocas gourmet artesanais, feitas com ingredientes selecionados e muito carinho. Peça agora o seu delivery!",
 };
 
@@ -41,7 +41,7 @@ export default function RootLayout({
           <CartDrawer />
           <main className="flex-1">{children}</main>
           <footer className="border-t border-cream/20 py-8 text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Pipoca Gourmet Artesanal. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Flor e Açúcar Artesanal. Todos os direitos reservados.
           </footer>
         </CartProvider>
       </body>

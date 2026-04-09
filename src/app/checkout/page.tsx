@@ -31,7 +31,7 @@ export default function CheckoutPage() {
     setIsFinishing(true);
 
     // Generate WhatsApp Summary
-    let summary = `*Novo Pedido - Pipoca Gourmet*%0A%0A`;
+    let summary = `*Novo Pedido - Flor e Açúcar*%0A%0A`;
     summary += `*Cliente:* ${formData.name}%0A`;
     summary += `*Telefone:* ${formData.phone}%0A`;
     summary += `*Endereço:* ${formData.address}%0A`;
