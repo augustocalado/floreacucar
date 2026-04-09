@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import { CartProvider } from "@/context/CartContext";
 import { StoreProvider } from "@/context/StoreContext";
 import { CartDrawer } from "@/components/cart/CartDrawer";
@@ -42,9 +43,7 @@ export default function RootLayout({
             <Navbar />
             <CartDrawer />
             <main className="flex-1">{children}</main>
-            <footer className="border-t border-cream/20 py-8 text-center text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} Flor e Açúcar Artesanal. Todos os direitos reservados.
-            </footer>
+            <Footer />
           </CartProvider>
         </StoreProvider>
       </body>
