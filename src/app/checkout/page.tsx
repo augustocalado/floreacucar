@@ -1,3 +1,5 @@
+"use client";
+
 import { useCart } from "@/context/CartContext";
 import { useStore } from "@/context/StoreContext";
 import { ArrowLeft, Send, CreditCard, QrCode, Banknote } from "lucide-react";
