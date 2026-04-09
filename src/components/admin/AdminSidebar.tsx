@@ -10,9 +10,10 @@ import {
   ChevronRight,
   Popcorn,
   LogOut,
+  UtensilsCrossed,
 } from "lucide-react";
 
-type View = "dashboard" | "orders" | "products" | "customers" | "settings";
+type View = "dashboard" | "orders" | "products" | "customers" | "kds" | "settings";
 
 interface AdminSidebarProps {
   activeView: View;
@@ -20,10 +21,11 @@ interface AdminSidebarProps {
 }
 
 const navItems = [
-  { id: "dashboard" as View, label: "Dashboard", icon: LayoutDashboard },
-  { id: "orders"    as View, label: "Pedidos",   icon: ShoppingBag },
-  { id: "products"  as View, label: "Produtos",  icon: Package },
-  { id: "customers" as View, label: "Clientes",  icon: Users },
+  { id: "dashboard" as View, label: "Dashboard",    icon: LayoutDashboard },
+  { id: "orders"    as View, label: "Pedidos",      icon: ShoppingBag },
+  { id: "kds"       as View, label: "Cozinha (KDS)", icon: UtensilsCrossed },
+  { id: "products"  as View, label: "Produtos",     icon: Package },
+  { id: "customers" as View, label: "Clientes",     icon: Users },
   { id: "settings"  as View, label: "Configurações", icon: Settings },
 ];
 

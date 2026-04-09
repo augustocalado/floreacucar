@@ -20,9 +20,10 @@ import {
   Search,
 } from "lucide-react";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
+import { KDSView } from "@/components/admin/KDSView";
 import { useStore } from "@/context/StoreContext";
 
-type View = "dashboard" | "orders" | "products" | "customers" | "settings";
+type View = "dashboard" | "orders" | "products" | "customers" | "kds" | "settings";
 
 // ─── Mock Data ────────────────────────────────────────────────────────────────
 const mockOrders = [
@@ -394,6 +395,7 @@ export default function AdminDashboard() {
   const views: Record<View, React.ReactNode> = {
     dashboard: <DashboardView />,
     orders:    <OrdersView />,
+    kds:       <KDSView />,
     products:  <ProductsView />,
     customers: <CustomersView />,
     settings:  <SettingsView />,
