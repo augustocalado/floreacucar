@@ -1,6 +1,5 @@
-"use client";
-
 import { useCart } from "@/context/CartContext";
+import { useStore } from "@/context/StoreContext";
 import { ArrowLeft, Send, CreditCard, QrCode, Banknote } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -8,6 +7,7 @@ import Image from "next/image";
 
 export default function CheckoutPage() {
   const { items, cartTotal, clearCart } = useCart();
+  const { storeName } = useStore();
   const [isFinishing, setIsFinishing] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -31,7 +31,7 @@ export default function CheckoutPage() {
     setIsFinishing(true);
 
     // Generate WhatsApp Summary
-    let summary = `*Novo Pedido - Flor e Açúcar*%0A%0A`;
+    let summary = `*Novo Pedido - ${storeName}*%0A%0A`;
     summary += `*Cliente:* ${formData.name}%0A`;
     summary += `*Telefone:* ${formData.phone}%0A`;
     summary += `*Endereço:* ${formData.address}%0A`;

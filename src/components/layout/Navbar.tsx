@@ -3,9 +3,11 @@
 import { ShoppingCart, Menu, Popcorn } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
+import { useStore } from "@/context/StoreContext";
 
 export function Navbar() {
   const { count, setIsCartOpen } = useCart();
+  const { storeName, logoUrl } = useStore();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-cream/20 bg-background/80 backdrop-blur-md">
@@ -13,9 +15,13 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Menu className="h-6 w-6 lg:hidden" />
           <Link href="/" className="flex items-center gap-2">
-            <Popcorn className="h-8 w-8 text-gold" />
+            {logoUrl ? (
+              <img src={logoUrl} alt={storeName} className="h-8 w-auto object-contain" />
+            ) : (
+              <Popcorn className="h-8 w-8 text-gold" />
+            )}
             <span className="hidden font-serif text-xl font-bold tracking-tight text-brown-dark sm:block">
-              Flor e Açúcar
+              {storeName}
             </span>
           </Link>
         </div>

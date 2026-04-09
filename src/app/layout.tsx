@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { CartProvider } from "@/context/CartContext";
+import { StoreProvider } from "@/context/StoreContext";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 
 const geistSans = Geist({
@@ -36,14 +37,16 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-background selection:bg-gold/30">
-        <CartProvider>
-          <Navbar />
-          <CartDrawer />
-          <main className="flex-1">{children}</main>
-          <footer className="border-t border-cream/20 py-8 text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Flor e Açúcar Artesanal. Todos os direitos reservados.
-          </footer>
-        </CartProvider>
+        <StoreProvider>
+          <CartProvider>
+            <Navbar />
+            <CartDrawer />
+            <main className="flex-1">{children}</main>
+            <footer className="border-t border-cream/20 py-8 text-center text-sm text-muted-foreground">
+              &copy; {new Date().getFullYear()} Flor e Açúcar Artesanal. Todos os direitos reservados.
+            </footer>
+          </CartProvider>
+        </StoreProvider>
       </body>
     </html>
   );
